@@ -30,12 +30,12 @@ RUN bun run build
 
 # Copy production dependencies and source code into final image
 FROM base AS release
-COPY --from=prerelease --chown=bun:bun /app /app
+COPY --from=prerelease --chown=1000:1000 /app /app
 WORKDIR ${FOLDER}
 
 ENV NODE_ENV=production
 
-USER bun
+USER 1000:1000
 
 EXPOSE 3000/tcp
 ENV PORT=3000
