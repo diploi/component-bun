@@ -11,11 +11,11 @@ COPY . /app
 WORKDIR ${FOLDER}
 
 RUN mkdir -p /temp/dev
-COPY package.json bun.lock /temp/dev/
-RUN cd /temp/dev && bun install --frozen-lockfile
-
+RUN cp -t /temp/dev/ package.json bun.lock
 RUN mkdir -p /temp/prod
-COPY package.json bun.lock /temp/prod/
+RUN cp -t /temp/prod/ package.json bun.lock
+
+RUN cd /temp/dev && bun install --frozen-lockfile
 # Install with --production (exclude devDependencies)
 RUN cd /temp/prod && bun install --frozen-lockfile --production
 
@@ -31,6 +31,7 @@ RUN bun run build
 # Copy production dependencies and source code into final image
 FROM base AS release
 COPY --from=prerelease --chown=1000:1000 /app /app
+COPY --from=install --chown=1000:1000 /temp/prod/node_modules node_modules
 WORKDIR ${FOLDER}
 
 ENV NODE_ENV=production

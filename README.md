@@ -15,3 +15,7 @@ Will run `bun install` when component is first initialized, and `bun dev` when d
 ### Production
 
 Will build a production ready image. Image runs `bun install` & `bun run build` when being created. Once the image runs, `bun start` is called.
+
+## Links
+
+- [Bun documentation](https://bun.sh/docs)
