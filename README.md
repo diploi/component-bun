@@ -2,11 +2,25 @@
 
 # Bun Component for Diploi
 
+Launch a trial, no card or registration required
+https://diploi.com/component/bun
+
 A generic Bun component that can be used to run any JS / TS app.
 
 Uses the official [oven/bun](https://hub.docker.com/r/oven/bun) Docker image.
 
 ## Operation
+
+### Getting started
+
+1. In the Dashboard, click **Create Project +**
+2. Under **Pick Components**, choose **Bun**
+ You can add other frameworks from this page if you want to create a monorepo application, eg, Bun for API + React for frontend.
+3. In **Pick Add-ons**, select any databases you need.
+4. Choose **Create Repository**, which will generate a new GitHub repo.
+5. Finally, click **Launch Stack**
+
+Link the guide https://diploi.com/blog/hosting_bun_apps
 
 ### Development
 
