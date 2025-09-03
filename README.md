@@ -2,6 +2,10 @@
 
 # Bun Component for Diploi
 
+[![launch with diploi badge](https://diploi.com/launch.svg)](https://diploi.com/component/bun)
+[![component on diploi badge](https://diploi.com/component.svg)](https://diploi.com/component/bun)
+[![latest tag badge](https://badgen.net/github/tag/diploi/component-bun)](https://diploi.com/component/bun)
+
 Launch a trial, no card or registration required
 https://diploi.com/component/bun
 
