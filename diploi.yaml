@@ -10,7 +10,7 @@ contexts:
 hosts:
   - name: Bun
     identifier: app
-    urlFormat: '[label].[default-domain]'
+    port: 3000
 
 connectionStrings:
   - name: Internal Address
