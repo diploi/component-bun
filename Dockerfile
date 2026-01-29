@@ -1,4 +1,4 @@
-FROM oven/bun:1.2-slim AS base
+FROM oven/bun:1.3.8-slim AS base
 
 # This will be set by the GitHub action to the folder containing this component.
 ARG FOLDER=/app
