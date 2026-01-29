@@ -99,10 +99,12 @@ Bun.serve({
               height="64"
           />
           
-          <h1>Bun - Ports</h1>
+          <h1>Bun</h1>
 
           <p>
-              WIP Ports stuff
+              Your Bun application is up and running! You can start editing the code
+              to build your backend API.
+              In development stage, Bun will automatically reload as you make changes.
               <br><br>
               <b> Install dependencies: </b><br> 
               Please use <code>bun add package_name</code> to add NPM packages to your environment.
@@ -115,7 +117,7 @@ Bun.serve({
           /></a>
       </body>
     </html>`,
-      { headers: { 'Content-Type': 'text/html' } }
+      { headers: { "Content-Type": "text/html" } }
     );
   },
 });
