@@ -3,10 +3,6 @@ type: component
 name: Bun
 description: Official Diploi component for Bun
 
-contexts:
-  - name: app
-    identifier: app
-
 supportsAdditionalHosts: { serviceName: 'app'}
 
 hosts:
@@ -14,12 +10,6 @@ hosts:
     identifier: app
     port: 3000
 
-
 images:
   - identifier: app
-    prebuildImage: ghcr.io/diploi/component-bun:[tag]
-
-logs:
-  - name: Bun Log
-    type: log
-    labelSelector: app=app
+    prebuildImage: public.ecr.aws/p8t2q7f4/diploi/component-bun:[tag]
