@@ -52,6 +52,19 @@ spec:
             - containerPort: 3000
           {{- if eq .Values.stage "development" }}
           workingDir: /app{{ .Values.folder }}
+          {{- with .Values.containerCommands.developmentStart }}
+          command:
+            - /bin/sh
+            - -c
+            - "{{ . }}"
+          {{- end }}
+          {{- else }}
+          {{- with .Values.containerCommands.productionStart }}
+          command:
+            - /bin/sh
+            - -c
+            - "{{ . }}"
+          {{- end }}
           {{- end }}
           env:
             {{- range .Values.env }}
